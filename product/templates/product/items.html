@@ -1,0 +1,11 @@
+{% extends  "users/base.html" %}
+
+{% block content %}
+<h2> Product Page</h2>
+{% for i in items %}
+<div>
+{{ i }}
+<a href="{% url 'add-to-cart'  i.id  %}">Add to cart</a>
+</div>
+{% endfor %}
+{% endblock content %}

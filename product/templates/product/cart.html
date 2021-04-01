@@ -1,0 +1,14 @@
+{% extends  "users/base.html" %}
+
+{% block content %}
+<h2> Cart Page</h2>
+{% if my_cart %}
+{% for i in my_cart %}
+<div>
+{{ i }}
+</div>
+{% endfor %}
+{% else %}
+<p>Cart is Empty</p>
+{% endif %}
+{% endblock content %}
